@@ -2019,3 +2019,98 @@ nav a:hover {
         padding: 20px 4%;
     }
 }
+
+/* 3D Spinning Logo */
+.logo img {
+    animation: spinLogo 5s linear infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes spinLogo {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* ===== Animated Hero Section ===== */
+
+.hero {
+position: relative;
+overflow: hidden;
+}
+
+/* Smooth entrance animation */
+.hero h1 {
+animation: heroFadeIn 1s ease-out both;
+}
+
+.hero p {
+animation: heroFadeIn 1.3s ease-out both;
+}
+
+.hero .hero-btn,
+.hero .btn {
+animation: heroFadeIn 1.6s ease-out both;
+}
+
+/* Gentle background glow */
+.hero::before {
+content: "";
+position: absolute;
+width: 280px;
+height: 280px;
+top: -100px;
+right: -80px;
+background: radial-gradient(
+circle,
+rgba(255, 255, 255, 0.14),
+transparent 70%
+);
+border-radius: 50%;
+pointer-events: none;
+animation: heroGlow 5s ease-in-out infinite alternate;
+}
+
+/* Keep hero content above the glow */
+.hero > * {
+position: relative;
+z-index: 1;
+}
+
+/* Fade in and move upward */
+@keyframes heroFadeIn {
+from {
+opacity: 0;
+transform: translateY(25px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* Slowly change the glow size */
+@keyframes heroGlow {
+from {
+transform: scale(0.9);
+opacity: 0.5;
+}
+to {
+transform: scale(1.2);
+opacity: 1;
+}
+}
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+.hero h1,
+.hero p,
+.hero .hero-btn,
+.hero .btn,
+.hero::before {
+animation: none;
+}
+}
