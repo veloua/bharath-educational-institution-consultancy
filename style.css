@@ -2115,29 +2115,5 @@ animation: none;
 }
 }
 
-/* FIXED BACKGROUND FOR ENTIRE WEBSITE */
 
-html {
-    min-height: 100%;
-}
-
-body {
-    background-image: url("./image/background.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* Make main sections transparent */
-
-.hero,
-.intro,
-.courses,
-.who-we-help,
-.why-us,
-.admissions,
-.contact,
-.photo-gallery {
-    background: transparent !important;
 }
