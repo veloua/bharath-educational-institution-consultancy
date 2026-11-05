@@ -2115,5 +2115,44 @@ animation: none;
 }
 }
 
+/* FIX HERO CONTENT ALIGNMENT */
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 52%;
+}
+
+.hero-content .photo {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    width: 100%;
+    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+.hero-content p {
+    width: 100%;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.institution-heading h2 {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.4;
+    background: linear-gradient(90deg, #123c8c, #e67e22, #159957);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
